@@ -30,3 +30,4 @@ jobs:
         with:
           # command to execute
           command: build
+          target: artifacts.pkr.hcl
