@@ -14,7 +14,9 @@ source "linode" "example" {
   ssh_username      = "root"
 }
 
-provisioner "shell" {
-    inline = ["curl https://raw.githubusercontent.com/venkatamutyala/linode-workstation/main/setup.sh | bash"]
+build {
+  provisioner "shell" {
+      inline = ["curl https://raw.githubusercontent.com/venkatamutyala/linode-workstation/main/setup.sh | bash"]
+  }
 }
 
