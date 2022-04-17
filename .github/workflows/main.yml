@@ -32,5 +32,3 @@ jobs:
           command: build
           target: artifacts.pkr.hcl
           arguments: "-var linode_api_token=${{ secrets.TOKEN }}"
-        env:
-          PACKER_LOG: 1
