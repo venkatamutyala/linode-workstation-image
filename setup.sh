@@ -18,7 +18,8 @@ sudo usermod -aG sudo venkatamutyala
 sudo usermod -aG docker venkatamutyala
 sudo touch /home/venkatamutyala/.zshrc
 sudo cp -r ~/.ssh /home/venkatamutyala/
-chown -R venkatamutyala:venkatamutyala /home/venkatamutyala
+sudo chown -R venkatamutyala:venkatamutyala /home/venkatamutyala
+sudo echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
@@ -31,4 +32,6 @@ curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/instal
 sed -i 's/plugins=(git)/plugins=(git asdf)/' /home/venkatamutyala/.zshrc
 git config --global user.email "venkata@venkatamutyala.com"
 git config --global user.name "Venkata Mutyala"
+sudo cp -r /root/.ssh/authorized_keys /home/venkatamutyala/.ssh/authorized_keys
+sudo chown -R venkatamutyala:venkatamutyala /home/venkatamutyala
 EOF
