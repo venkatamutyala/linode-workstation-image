@@ -4,6 +4,7 @@ sudo apt-get -y install zsh
 sudo apt-get -y install \
     ca-certificates \
     curl \
+    unzip \
     gnupg \
     lsb-release
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
