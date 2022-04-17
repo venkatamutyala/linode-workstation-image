@@ -15,6 +15,7 @@ source "linode" "example" {
 }
 
 build {
+  sources = ["source.linode.example"]
   provisioner "shell" {
       inline = ["curl https://raw.githubusercontent.com/venkatamutyala/linode-workstation/main/setup.sh | bash"]
   }
