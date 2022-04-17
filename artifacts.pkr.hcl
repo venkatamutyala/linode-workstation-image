@@ -9,7 +9,7 @@ source "linode" "example" {
   image_label       = "packer-debian-10"
   instance_label    = "temp-packer-debian-10"
   instance_type     = "g6-nanode-1"
-  linode_token      = var.linode_api_token
+  linode_token      = "${var.linode_api_token}"
   region            = "us-east"
   ssh_username      = "root"
 }
