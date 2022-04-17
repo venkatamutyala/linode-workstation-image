@@ -31,4 +31,4 @@ jobs:
           # command to execute
           command: build
           target: artifacts.pkr.hcl
-          arguments: "-var linode_api_token=${{ secrets.TOKEN }}"
+          arguments: "-var 'linode_api_token=${{ secrets.TOKEN }}'"
